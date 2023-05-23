@@ -62,7 +62,7 @@ namespace WindowsFormsC_
                 else
                 {
                     MessageBox.Show("Не верный пользователь или пароль");
-                    }
+                }
             }
         }
         private void Button2_Click(object sender, EventArgs e)
@@ -139,5 +139,5 @@ namespace WindowsFormsC_
                 MessageBox.Show("Произошла ошибка: " + ex.Message);
             }
         }
-        }
+    }
 }
