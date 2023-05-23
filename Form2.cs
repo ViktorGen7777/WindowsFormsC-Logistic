@@ -50,6 +50,7 @@ namespace WindowsFormsC_
                     {
                         isLastRowEmpty = false;
                         break;
+                        // get out from cycle
                     }
                 }
 
