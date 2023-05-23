@@ -29,8 +29,6 @@ namespace WindowsFormsC_
                 XmlDocument doc = new XmlDocument();
                 doc.Load(fileName);
                 XmlNodeList nodes = doc.SelectNodes("users/user"); // пример выбора всех узлов 
-                //XmlNode root = doc.DocumentElement;//Получаем корневой элемент XML-документа
-                //XmlNode existingUser = root.SelectSingleNode($"user[username='{textBoxLogin.Text}']")
 
                 string login = textBoxLogin.Text;
                 string password = textBoxPassword.Text;
@@ -114,10 +112,7 @@ namespace WindowsFormsC_
                         SaveFileDialog saveFileDialog = new SaveFileDialog();
                         saveFileDialog.Filter = "XML files (*.xml)|*.xml|All files (*.*)|*.*";
                         saveFileDialog.FileName = "users";
-                        //saveFileDialog.RestoreDirectory = false;
 
-                        //if (saveFileDialog.ShowDialog() == DialogResult.OK)
-                        //{
                         fileName = saveFileDialog.FileName + ".xml";
                         XmlDocument doc = new XmlDocument();
                         XmlDeclaration xmlDeclaration = doc.CreateXmlDeclaration("1.0", "UTF-8", null);
@@ -126,8 +121,7 @@ namespace WindowsFormsC_
                         doc.AppendChild(root);
                         doc.Save(fileName);
                         MessageBox.Show("Файл users.xml успешно создан");
-                        //}
-                        //else
+
                         if (result == DialogResult.Yes)
                         {
                             OpenFileDialog openFileDialog = new OpenFileDialog();
